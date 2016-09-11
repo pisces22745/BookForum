@@ -21,7 +21,10 @@
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css({.tmp/app,app}) main.css -->
+
+  <link rel="stylesheet" href="../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss">
   <link rel="stylesheet" href="main.css">
+
   <!-- endbuild -->
 </head>
 <body ng-app="app">
@@ -56,10 +59,15 @@
 <script src="configs/router.js" charset="utf-8"></script>
 <script src="configs/run.js" charset="utf-8"></script>
 <script src="constants/api.js" charset="utf-8"></script>
+<script src="constants/Errors.js" charset="utf-8"></script>
 <script src="controllers/home/index.js" charset="utf-8"></script>
 <script src="controllers/home/notFound.js" charset="utf-8"></script>
 <script src="controllers/reader/create.js" charset="utf-8"></script>
+<script src="controllers/thread/list.js" charset="utf-8"></script>
+<script src="decorators/assertSameAs.js" charset="utf-8"></script>
 <script src="decorators/fieldError.js" charset="utf-8"></script>
+<script src="filters/error.js" charset="utf-8"></script>
+<script src="filters/page.js" charset="utf-8"></script>
 <script src="services/interceptors/ApiHandler.js" charset="utf-8"></script>
 <script src="services/interceptors/AuthHandler.js" charset="utf-8"></script>
 <script src="services/interceptors/ErrorHandler.js" charset="utf-8"></script>

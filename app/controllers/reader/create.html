@@ -13,21 +13,22 @@
   </div>
   <div>
     <label for="_retypedPassword">确认密码</label>
-    <input type="password" name="retypedPassword" id="_retypedPassword">
+    <input type="password" name="retypedPassword" ng-model="vm.retypedPassword"
+           bf-field-error="{same:'确认密码必须与密码相同'}" bf-assert-same-as="vm.form.password" id="_retypedPassword">
   </div>
   <div>
     <label for="_captcha">图形验证码</label>
     <input type="text" name="captcha" id="_captcha" ng-model="vm.form.captcha">
-    <img src="" alt="图形验证码">
+    <img ng-src="" alt="图形验证码">
   </div>
   <div>
-    <input type="checkbox" name="accepted" id="_accepted">
+    <input type="checkbox" name="accepted" id="_accepted" ng-model="vm.accepted" bf-assert-same-as="true">
     <label for="_accepted">
       我已阅读并同意
       <a href="">用户服务协议</a>
     </label>
   </div>
   <div>
-    <button type="submit">提交</button>
+    <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">提交</button>
   </div>
 </form>
